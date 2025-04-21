@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YMC Links | Oyun Hesapları & Item Satış</title>
+  <meta name="description" content="YMCSHOP - Oyun hesapları ve item satış mağazalarına hızlı erişim.">
+  
+  <link rel="icon" href="YMC.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WKEG6CP3KC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WKEG6CP3KC');
+  </script>
+  
+  <style>
+    :root {
+      --primary: #6c5ce7;
+      --primary-dark: #5649c0;
+      --secondary: #fd79a8;
+      --dark: #2d3436;
+      --light: #f5f6fa;
+      --gray: #636e72;
+      --card-bg: #ffffff;
+      --body-bg: #f9f9f9;
+      --text-color: #2d3436;
+      --section-bg: #ffffff;
+      --contact-bg: linear-gradient(135deg, #6c5ce7 0%, #fd79a8 100%);
+      --card-shadow: 0 10px 30px rgba(108, 92, 231, 0.2);
+      --hover-shadow: 0 15px 40px rgba(108, 92, 231, 0.3);
+    }
+    
+    .dark-mode {
+      --primary: #a29bfe;
+      --primary-dark: #8179e6;
+      --secondary: #ff8fab;
+      --dark: #f5f6fa;
+      --light: #2d3436;
+      --gray: #b2bec3;
+      --card-bg: #2d3436;
+      --body-bg: #1e272e;
+      --text-color: #f5f6fa;
+      --section-bg: #2d3436;
+      --contact-bg: linear-gradient(135deg, #6c5ce7 0%, #fd79a8 100%);
+      --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      --hover-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--body-bg);
+      color: var(--text-color);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Theme Toggle */
+    .theme-toggle {
+      position: fixed;
+      top: 30px;
+      right: 30px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+    
+    .theme-toggle:hover {
+      transform: scale(1.1);
+    }
+    
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+      background: var(--contact-bg);
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 0 20px;
+      animation: fadeInUp 1s ease;
+    }
+    
+    .logo {
+      width: 180px;
+      height: 180px;
+      object-fit: contain;
+      margin-bottom: 30px;
+      filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+      transition: transform 0.5s ease;
+    }
+    
+    .logo:hover {
+      transform: scale(1.1) rotate(5deg);
+    }
+    
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 800;
+      margin-bottom: 15px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3));
+      background: linear-gradient(to right, white, #f5f6fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+      font-weight: 300;
+      opacity: 0.9;
+    }
+    
+    .scroll-down {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 2rem;
+      animation: bounce 2s infinite;
+      cursor: pointer;
+    }
+    
+    /* Links Section */
+    .links-section {
+      padding: 100px 0;
+      background-color: var(--section-bg);
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+      font-size: 2.5rem;
+      color: var(--primary);
+      position: relative;
+    }
+    
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 5px;
+      background: var(--contact-bg);
+      margin: 20px auto;
+      border-radius: 5px;
+    }
+    
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    
+    .link-card {
+      background: var(--card-bg);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--card-shadow);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      text-decoration: none;
+      color: var(--text-color);
+      position: relative;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    
+    .link-card.animated {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .link-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--hover-shadow);
+    }
+    
+    .card-image {
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(108, 92, 231, 0.1);
+    }
+    
+    .card-image img {
+      max-width: 120px;
+      max-height: 120px;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+    
+    .link-card:hover .card-image img {
+      transform: scale(1.1);
+    }
+    
+    .card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(108, 92, 231, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .link-card:hover .card-overlay {
+      opacity: 1;
+    }
+    
+    .visit-btn {
+      background: white;
+      color: var(--primary);
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+    }
+    
+    .visit-btn:hover {
+      background: var(--dark);
+      color: white;
+      transform: translateY(-3px);
+    }
+    
+    .visit-btn i {
+      margin-right: 8px;
+    }
+    
+    .card-content {
+      padding: 25px;
+      text-align: center;
+    }
+    
+    .card-content h3 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+    
+    .card-content p {
+      font-size: 0.95rem;
+      color: var(--gray);
+    }
+    
+    /* Contact Section */
+    .contact-section {
+      padding: 100px 0;
+      background: var(--contact-bg);
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .contact-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://assets-global.website-files.com/5e6c01bb5212506d6c119069/5e6ed123bb6eb63066a8d9e5_contact-pattern.svg') center/cover no-repeat;
+      opacity: 0.1;
+      z-index: 1;
+    }
+    
+    .contact-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      background: white;
+      color: var(--primary);
+      padding: 18px 35px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transform: scale(1);
+      opacity: 0;
+    }
+    
+    .contact-btn.animated {
+      opacity: 1;
+      transform: scale(1);
+    }
+    
+    .contact-btn:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    }
+    
+    .contact-btn i {
+      margin-right: 12px;
+      font-size: 1.2rem;
+    }
+    
+    /* YMC+ Button */
+    .ymc-plus-btn {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      background: var(--secondary);
+      color: white;
+      border: none;
+      padding: 18px 30px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: 50px;
+      cursor: pointer;
+      z-index: 100;
+      box-shadow: 0 10px 30px rgba(253, 121, 168, 0.5);
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease;
+      transform: translateY(20px);
+      opacity: 0;
+      animation: pulse 2s infinite;
+    }
+    
+    .ymc-plus-btn.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    
+    .ymc-plus-btn:hover {
+      transform: translateY(-5px) scale(1.1);
+      box-shadow: 0 15px 40px rgba(253, 121, 168, 0.7);
+      animation: none;
+    }
+    
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 200;
+      justify-content: center;
+      align-items: center;
+      overflow-y: auto;
+      backdrop-filter: blur(5px);
+    }
+    
+    .modal-content {
+      background: var(--card-bg);
+      padding: 50px;
+      border-radius: 25px;
+      max-width: 900px;
+      width: 90%;
+      position: relative;
+      margin: 20px 0;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+      max-height: 90vh;
+      overflow-y: auto;
+      transform: scale(0.9);
+      opacity: 0;
+      transition: all 0.4s ease;
+    }
+    
+    .modal.show .modal-content {
+      transform: scale(1);
+      opacity: 1;
+    }
+    
+    .close-btn {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      background: none;
+      border: none;
+      color: var(--gray);
+      font-size: 1.8rem;
+      cursor: pointer;
+      z-index: 10;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+    
+    .close-btn:hover {
+      background: rgba(108, 92, 231, 0.1);
+      color: var(--primary);
+    }
+    
+    .modal-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .modal-logo {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-bottom: 20px;
+    }
+    
+    .modal h2 {
+      color: var(--primary);
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+    
+    .modal-subtitle {
+      color: var(--gray);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .premium-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+    
+    .feature-item {
+      background: var(--body-bg);
+      padding: 25px;
+      border-radius: 15px;
+      display: flex;
+      align-items: flex-start;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(108, 92, 231, 0.2);
+    }
+    
+    .feature-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      border-color: var(--primary);
+    }
+    
+    .feature-icon {
+      width: 50px;
+      height: 50px;
+      margin-right: 20px;
+      border-radius: 12px;
+      background: var(--contact-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+    
+    .feature-text h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: var(--text-color);
+    }
+    
+    .feature-text p {
+      font-size: 0.9rem;
+      color: var(--gray);
+    }
+    
+    .modal-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 40px;
+    }
+    
+    .modal-join-btn {
+      background: var(--contact-bg);
+      color: white;
+      border: none;
+      padding: 18px;
+      border-radius: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.3s ease;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+    }
+    
+    .modal-join-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(108, 92, 231, 0.5);
+      background: linear-gradient(135deg, var(--primary-dark) 0%, #e84393 100%);
+    }
+    
+    .modal-join-btn i {
+      margin-right: 12px;
+      font-size: 1.3rem;
+    }
+    
+    .advantages-btn {
+      background: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+      padding: 15px;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+    
+    .advantages-btn:hover {
+      background: var(--primary);
+      color: white;
+    }
+    
+    .advantages-container {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+      background-color: var(--body-bg);
+      border-radius: 15px;
+      margin-top: 30px;
+    }
+    
+    .advantages-content {
+      padding: 30px;
+    }
+    
+    .advantage-category {
+      margin-bottom: 25px;
+    }
+    
+    .category-title {
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+    }
+    
+    .category-title i {
+      margin-right: 10px;
+    }
+    
+    .advantage-item {
+      margin-left: 20px;
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 25px;
+      color: var(--text-color);
+      font-size: 0.95rem;
+    }
+    
+    .advantage-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--secondary);
+    }
+    
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+      }
+      40% {
+        transform: translateY(-20px) translateX(-50%);
+      }
+      60% {
+        transform: translateY(-10px) translateX(-50%);
+      }
+    }
+    
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(253, 121, 168, 0.7);
+      }
+      70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 15px rgba(253, 121, 168, 0);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(253, 121, 168, 0);
+      }
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      .hero h1 {
+        font-size: 3rem;
+      }
+      
+      .hero p {
+        font-size: 1.2rem;
+      }
+      
+      .section-title {
+        font-size: 2.2rem;
+      }
+      
+      .theme-toggle {
+        top: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .hero {
+        min-height: 500px;
+      }
+      
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .logo {
+        width: 140px;
+        height: 140px;
+      }
+      
+      .section-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+      }
+      
+      .links-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      }
+      
+      .modal-content {
+        padding: 30px;
+      }
+      
+      .feature-item {
+        padding: 20px;
+      }
+      
+      .ymc-plus-btn {
+        bottom: 20px;
+        right: 20px;
+        padding: 15px 25px;
+        font-size: 1rem;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .hero p {
+        font-size: 1rem;
+      }
+      
+      .section-title {
+        font-size: 1.8rem;
+      }
+      
+      .links-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .modal-content {
+        padding: 25px 20px;
+      }
+      
+      .modal h2 {
+        font-size: 2rem;
+      }
+      
+      .premium-features {
+        grid-template-columns: 1fr;
+      }
+      
+      .contact-btn {
+        padding: 15px 25px;
+      }
+      
+      .theme-toggle {
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Theme Toggle Button -->
+  <button class="theme-toggle" id="themeToggle">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>YMC SHOP</h1>
+      <p>Oyun hesapları ve item satış mağazalarına hızlı erişim</p>
+    </div>
+    <div class="scroll-down" onclick="document.querySelector('.links-section').scrollIntoView({ behavior: 'smooth' })">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- Links Section -->
+  <section class="links-section" id="links">
+    <div class="container">
+      <h2 class="section-title">Mağazalarımız</h2>
+      <div class="links-grid">
+        <!-- Item 1 -->
+        <a href="https://www.itemsatis.com/p/YMCSHOP" class="link-card" target="_blank">
+          <div class="card-image">
+            <img src="https://ugc.production.linktr.ee/uNjneSjXRUqnHQiNkBhm_unnamed%20(2).webp" alt="ItemSatış">
+            <div class="card-overlay">
+              <button class="visit-btn">
+                <i class="fas fa-external-link-alt"></i> Ziyaret Et
+              </button>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3>Item Satış Mağazamız</h3>
+            <p>itemsatis.com üzerindeki mağazamız</p>
+          </div>
+        </a>
+        
+        <!-- Item 2 -->
+        <a href="https://www.itemhesap.com/magaza/ymcshop" class="link-card" target="_blank">
+          <div class="card-image">
+            <img src="https://ugc.production.linktr.ee/dff51125-1d08-4372-9c1b-048b05bd1cb7_unnamed.png" alt="ItemHesap">
+            <div class="card-overlay">
+              <button class="visit-btn">
+                <i class="fas fa-external-link-alt"></i> Ziyaret Et
+              </button>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3>Item Hesap Mağazamız</h3>
+            <p>itemhesap.com üzerindeki mağazamız</p>
+          </div>
+        </a>
+        
+        <!-- Item 3 -->
+        <a href="https://hesap.com.tr/u/ymcshop" class="link-card" target="_blank">
+          <div class="card-image">
+            <img src="https://ugc.production.linktr.ee/1e1c955f-66ee-4e14-b30b-e1ab340e34b4_tBF7dQ86-400x400.png" alt="Hesap.com.tr">
+            <div class="card-overlay">
+              <button class="visit-btn">
+                <i class="fas fa-external-link-alt"></i> Ziyaret Et
+              </button>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3>Hesap.com.tr Mağazamız</h3>
+            <p>hesap.com.tr üzerindeki mağazamız</p>
+          </div>
+        </a>
+        
+        <!-- Item 4 -->
+        <a href="https://www.oyunalisveris.com/magaza/YMCSHOP" class="link-card" target="_blank">
+          <div class="card-image">
+            <img src="https://ugc.production.linktr.ee/209fcfaa-3edf-437f-9531-20ad8a4a146e_Screenshot-13.png" alt="OyunAlışveriş">
+            <div class="card-overlay">
+              <button class="visit-btn">
+                <i class="fas fa-external-link-alt"></i> Ziyaret Et
+              </button>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3>OyunAlışveriş Mağazamız</h3>
+            <p>oyunalisveris.com üzerindeki mağazamız</p>
+          </div>
+        </a>
+        
+        <!-- Item 5 -->
+        <a href="https://steamcommunity.com/id/YMCCLASS/" class="link-card" target="_blank">
+          <div class="card-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" alt="Steam">
+            <div class="card-overlay">
+              <button class="visit-btn">
+                <i class="fas fa-external-link-alt"></i> Ziyaret Et
+              </button>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3>Steam Profilimiz</h3>
+            <p>Steam'deki resmi profilimiz</p>
+          </div>
+        </a>
+        
+        <!-- Item 6 -->
+        <a href="https://www.instagram.com/ymc_resmi/" class="link-card" target="_blank">
+          <div class="card-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            <div class="card-overlay">
+              <button class="visit-btn">
+                <i class="fas fa-external-link-alt"></i> Ziyaret Et
+              </button>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3>Instagram Hesabımız</h3>
+            <p>Resmi Instagram hesabımız</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-content">
+        <h2 class="section-title" style="color: white;">İş Teklifleri</h2>
+        <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto;">Profesyonel işbirliği teklifleri için bizimle iletişime geçebilirsiniz</p>
+        <a href="mailto:business@ymcshop.online" class="contact-btn">
+          <i class="fas fa-envelope"></i> E-posta Gönder
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- YMC+ Button -->
+  <button class="ymc-plus-btn">
+    YMC+
+  </button>
+
+  <!-- YMC+ Modal -->
+  <div id="ymcModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <div class="modal-header">
+        <img src="https://i.hizliresim.com/kpqn4fh.png" alt="YMC+ Logo" class="modal-logo">
+        <h2>YMC+</h2>
+        <p class="modal-subtitle">Özel avantajlardan yararlanmak için YMC+ üye olun</p>
+      </div>
+      
+      <div class="premium-features">
+        <div class="feature-item">
+          <div class="feature-icon">🎁</div>
+          <div class="feature-text">
+            <h3>Hediye Max</h3>
+            <p>Üyelik avantajları</p>
+          </div>
+        </div>
+        
+        <div class="feature-item">
+          <div class="feature-icon">🎬</div>
+          <div class="feature-text">
+            <h3>Exxen</h3>
+            <p>1 Aylık üyelik</p>
+          </div>
+        </div>
+        
+        <div class="feature-item">
+          <div class="feature-icon">▶️</div>
+          <div class="feature-text">
+            <h3>YouTube Premium</h3>
+            <p>1 Ay tam erişim</p>
+          </div>
+        </div>
+        
+        <div class="feature-item">
+          <div class="feature-icon">🔒</div>
+          <div class="feature-text">
+            <h3>Kaspersky Premium</h3>
+            <p>+ VPN (1 Ay)</p>
+          </div>
+        </div>
+        
+        <div class="feature-item">
+          <div class="feature-icon">🎨</div>
+          <div class="feature-text">
+            <h3>Canva Pro</h3>
+            <p>Abonelik boyunca</p>
+          </div>
+        </div>
+        
+        <div class="feature-item">
+          <div class="feature-icon">🚗</div>
+          <div class="feature-text">
+            <h3>Ulaşım İndirimleri</h3>
+            <p>Uber ve araç kiralama avantajları</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal-buttons">
+        <button class="modal-join-btn" id="modalJoinButton">
+          <i class="fab fa-whatsapp"></i> WhatsApp'tan Katıl
+        </button>
+        <button class="advantages-btn" id="modalShowAdvantages">Tüm Avantajları Göster</button>
+      </div>
+      
+      <div class="advantages-container" id="advantagesContainer">
+        <div class="advantages-content">
+          <div class="advantage-category">
+            <div class="category-title">
+              <i class="fas fa-car"></i> Ulaşımda Avantajlar
+            </div>
+            <div class="advantage-item">Uber yolculuklarında 400 TL'ye varan indirim fırsatı!</div>
+            <div class="advantage-item">Enterprise araç kiralamalarında %40 indirim!</div>
+          </div>
+          
+          <div class="advantage-category">
+            <div class="category-title">
+              <i class="fas fa-gas-pump"></i> Yolda Tasarruf
+            </div>
+            <div class="advantage-item">Petrol Ofisi'nden yakıt alımlarında 5 kat puan!</div>
+          </div>
+          
+          <div class="advantage-category">
+            <div class="category-title">
+              <i class="fas fa-utensils"></i> Yeme-İçme Keyfi
+            </div>
+            <div class="advantage-item">Tıkla Gelsin®'den:</div>
+            <div class="advantage-item">BK Steakhouse® Menü'de 50 TL indirim!</div>
+            <div class="advantage-item">Maxi Popchicken Menü'de 50 TL indirim!</div>
+            <div class="advantage-item">Coffy'den 1 adet kahve hediye ☕️</div>
+          </div>
+          
+          <div class="advantage-category">
+            <div class="category-title">
+              <i class="fas fa-plane"></i> Seyahatte Süper Kazanç
+            </div>
+            <div class="advantage-item">Bilet Dükkanı'ndan:</div>
+            <div class="advantage-item">Otobüs biletlerinde 60 TL hediye</div>
+            <div class="advantage-item">Yurt içi uçak biletinde 175 TL</div>
+            <div class="advantage-item">Yurt dışı uçak biletinde 300 TL anında indirim!</div>
+          </div>
+          
+          <div class="advantage-category">
+            <div class="category-title">
+              <i class="fas fa-film"></i> Eğlencede Özgürlük
+            </div>
+            <div class="advantage-item">Hediye Max üyelik avantajları</div>
+            <div class="advantage-item">1 Aylık Exxen üyeliği</div>
+            <div class="advantage-item">1 Ay YouTube Premium erişimi</div>
+            <div class="advantage-item">Kaspersky Premium + VPN (1 Ay)</div>
+            <div class="advantage-item">Abonelik boyunca Canva Pro</div>
+          </div>
+          
+          <div class="advantage-category">
+            <div class="category-title">
+              <i class="fas fa-newspaper"></i> İçerik & Üyelik Avantajları
+            </div>
+            <div class="advantage-item">Aposto yıllık üyeliklerde %50 indirim!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Theme Toggle Functionality
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+    const themeIcon = themeToggle.querySelector('i');
+    
+    // Check for saved theme preference or use preferred color scheme
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      body.classList.add('dark-mode');
+      themeIcon.classList.remove('fa-moon');
+      themeIcon.classList.add('fa-sun');
+    }
+    
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      
+      if (body.classList.contains('dark-mode')) {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+
+    // Modal functionality
+    const ymcBtn = document.querySelector('.ymc-plus-btn');
+    const modal = document.getElementById('ymcModal');
+    const closeBtn = document.querySelector('.close-btn');
+    const modalJoinButton = document.getElementById('modalJoinButton');
+    const modalShowAdvantages = document.getElementById('modalShowAdvantages');
+    const advantagesContainer = document.getElementById('advantagesContainer');
+
+    // Open modal
+    ymcBtn.addEventListener('click', () => {
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => {
+        modal.classList.add('show');
+      }, 10);
+      
+      gtag('event', 'ymc_plus_open', {
+        'event_category': 'engagement',
+        'event_label': 'YMC+ Modal Opened'
+      });
+    });
+
+    // Close modal
+    closeBtn.addEventListener('click', () => {
+      modal.classList.remove('show');
+      setTimeout(() => {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }, 300);
+    });
+
+    // Close modal when clicking outside
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('show');
+        setTimeout(() => {
+          modal.style.display = 'none';
+          document.body.style.overflow = 'auto';
+        }, 300);
+      }
+    });
+
+    // Join button
+    modalJoinButton.addEventListener('click', function() {
+      window.open('https://wa.me/905510096844', '_blank');
+      gtag('event', 'ymc_plus_join_click', {
+        'event_category': 'conversion',
+        'event_label': 'YMC+ Join Button Click'
+      });
+    });
+
+    // Toggle advantages
+    modalShowAdvantages.addEventListener('click', function() {
+      if (advantagesContainer.style.maxHeight) {
+        advantagesContainer.style.maxHeight = null;
+        modalShowAdvantages.textContent = 'Tüm Avantajları Göster';
+      } else {
+        advantagesContainer.style.maxHeight = advantagesContainer.scrollHeight + 'px';
+        modalShowAdvantages.textContent = 'Avantajları Gizle';
+        setTimeout(() => {
+          advantagesContainer.scrollIntoView({ behavior: 'smooth', block: 'end' });
+        }, 300);
+      }
+    });
+
+    // Track link clicks
+    document.querySelectorAll('.link-card').forEach(link => {
+      link.addEventListener('click', function() {
+        const linkName = this.querySelector('h3').innerText;
+        gtag('event', 'link_click', {
+          'event_category': 'engagement',
+          'event_label': linkName
+        });
+      });
+    });
+
+    // Animate elements on scroll
+    const animateOnScroll = () => {
+      // Animate link cards
+      const linkCards = document.querySelectorAll('.link-card');
+      const contactBtn = document.querySelector('.contact-btn');
+      const ymcPlusBtn = document.querySelector('.ymc-plus-btn');
+      
+      // Calculate trigger point (80% of viewport height)
+      const triggerPoint = window.innerHeight * 0.8;
+      
+      linkCards.forEach((card, index) => {
+        const cardPosition = card.getBoundingClientRect().top;
+        
+        if (cardPosition < triggerPoint) {
+          // Staggered animation with delay based on index
+          setTimeout(() => {
+            card.classList.add('animated');
+          }, index * 100);
+        }
+      });
+      
+      // Animate contact button
+      if (contactBtn && !contactBtn.classList.contains('animated')) {
+        const contactBtnPosition = contactBtn.getBoundingClientRect().top;
+        
+        if (contactBtnPosition < triggerPoint) {
+          contactBtn.classList.add('animated');
+        }
+      }
+      
+      // Show YMC+ button after scrolling
+      if (window.scrollY > 300 && !ymcPlusBtn.classList.contains('visible')) {
+        ymcPlusBtn.classList.add('visible');
+      }
+    };
+
+    // Set initial state for animation
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        animateOnScroll();
+      }, 500);
+    });
+
+    window.addEventListener('scroll', animateOnScroll);
+
+    // Show YMC+ button after page load
+    setTimeout(() => {
+      document.querySelector('.ymc-plus-btn').classList.add('visible');
+    }, 1500);
+  </script>
+</body>
+</html>
